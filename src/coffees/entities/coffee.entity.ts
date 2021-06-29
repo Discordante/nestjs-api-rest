@@ -18,7 +18,7 @@ export class Coffee {
   @Column()
   brand: string;
 
-  @JoinTable() //Join the 2 tables - only the OWNER-side does this
+  @JoinTable() // 👈 Join the 2 tables - only the OWNER-side does this
   @ManyToMany(
     (type) => Flavor,
     (flavor) => flavor.coffees, // what is "coffee" within the Flavor Entity
