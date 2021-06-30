@@ -19,6 +19,7 @@ import appConfig from './config/app.config';
     }),
     CoffeesModule,
     TypeOrmModule.forRootAsync({
+      //Async load for module
       useFactory: () => ({
         type: 'postgres',
         host: process.env.DATABASE_HOST,
